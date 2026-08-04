@@ -4,41 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>Jesus' Love Church · THE WAY 237</title>
+  <title>Jesus' Love Church - THE WAY 237</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
-  <header class="site-header">
-    <a class="brand" href="./"><img src="./jxlogo.svg" alt="Jesus' Love Church"><span>Jesus' Love Church</span></a>
-    <div class="brand-sub">THE WAY 237</div>
-  </header>
-  <main>
-    <nav id="categories" class="categories" aria-label="말씀 카테고리"></nav>
-    <section class="controls">
-      <label class="search"><span>검색</span><input id="search" type="search" placeholder="제목·본문·날짜·내용 검색 (예: 8월 2일)" autocomplete="off"></label>
-      <div class="month-nav"><button id="older" type="button">‹ 이전</button><strong id="month"></strong><button id="newer" type="button">다음 ›</button></div>
+  <main class="site-shell">
+    <div class="ambient-architecture" aria-hidden="true">
+      <span class="ambient-plane ambient-plane-left"></span><span class="ambient-plane ambient-plane-right"></span><span class="ambient-plane ambient-plane-base"></span>
+      <span class="ambient-shelf"></span><span class="ambient-niche"><i></i><i></i><i></i></span>
+      <span class="ambient-orb ambient-orb-top"></span><span class="ambient-orb ambient-orb-middle"></span><span class="ambient-orb ambient-orb-low"></span>
+    </div>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Jesus' Love Church - THE WAY 237 홈"><img class="brand-logo" src="./jxlogo.svg" alt="Jesus' Love Church"><span class="brand-dash">—</span><span>THE WAY 237</span></a>
+    </header>
+    <section class="archive" aria-labelledby="archive-title">
+      <div class="section-head"><div><span class="section-kicker">Sermon Archive</span><h1 id="archive-title">말씀 아카이브</h1></div><input id="search" class="search" type="search" placeholder="제목·성경 본문·내용·날짜 검색" aria-label="말씀 검색"></div>
+      <div id="tabs" class="tabs" role="tablist" aria-label="예배 분류"></div>
+      <div id="month-pagination" class="month-pagination" aria-label="월별 말씀 페이지"></div>
+      <div id="cards" class="cards month-page month-page-next" aria-live="polite"></div>
     </section>
-    <p id="status" class="status" aria-live="polite"></p>
-    <section id="cards" class="cards"></section>
+    <div id="modal-backdrop" class="modal-backdrop is-hidden" role="presentation">
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="sermon-title">
+        <div class="modal-head"><span class="badge">전체 녹취록</span><div class="modal-actions"><a id="print-link" class="quiet-btn" target="_blank">PDF · 인쇄</a><button id="close-modal" class="quiet-btn" type="button">닫기</button></div></div>
+        <div class="modal-body"><div id="modal-meta" class="modal-meta"></div><h2 id="sermon-title"></h2><p id="modal-passage" class="modal-passage"></p>
+          <div class="annotation-panel"><div class="annotation-toolbar" role="toolbar" aria-label="녹취록 표시 도구">
+            <button class="annotation-btn annotation-highlight" data-command="hiliteColor" aria-label="형광펜"><span class="annotation-icon">🖍</span><span class="annotation-label">형광펜</span><span class="annotation-mobile-label">형광</span></button>
+            <button class="annotation-btn annotation-bold" data-command="bold" aria-label="굵게"><span class="annotation-icon">B</span><span class="annotation-label">굵게</span><span class="annotation-mobile-label">굵게</span></button>
+            <button class="annotation-btn annotation-underline" data-command="underline" aria-label="밑줄"><span class="annotation-icon">U</span><span class="annotation-label">밑줄</span><span class="annotation-mobile-label">밑줄</span></button>
+            <button class="annotation-btn" data-command="removeFormat" aria-label="선택 효과 지우기"><span class="annotation-icon">⌫</span><span class="annotation-label">선택 효과 지우기</span><span class="annotation-mobile-label">지우기</span></button>
+            <button id="clear-effects" class="annotation-btn annotation-clear" aria-label="전체 효과 지우기"><span class="annotation-icon">↺</span><span class="annotation-label">전체 효과 지우기</span><span class="annotation-mobile-label">전체삭제</span></button>
+          </div><p id="annotation-guide" class="annotation-guide" aria-live="polite">문장을 드래그해 선택한 뒤 원하는 효과를 누르세요.<span> 표시는 이 기기에만 저장되며 PDF에는 나오지 않습니다.</span></p></div>
+          <div id="transcript" class="transcript annotated-transcript" contenteditable="true" role="document" aria-label="개인 표시가 가능한 전체 녹취록"></div>
+        </div>
+      </section>
+    </div>
   </main>
-  <dialog id="reader" class="reader">
-    <article>
-      <header class="reader-head">
-        <button id="reader-back" type="button" class="soft">전체 녹취록</button>
-        <div class="reader-actions"><a id="print" class="soft" target="_blank">PDF · 인쇄</a><button id="close" class="soft" type="button">닫기</button></div>
-      </header>
-      <div class="reader-title"><p id="reader-meta"></p><h1 id="reader-heading"></h1><p id="reader-passage"></p></div>
-      <div id="transcript" class="transcript" contenteditable="true" spellcheck="false"></div>
-      <aside class="effects" aria-label="읽기 효과 도구">
-        <button data-command="backColor" data-value="#fff08a" title="형광펜"><span>🖍️</span><b>형광펜</b></button>
-        <button data-command="bold" title="굵게"><span>B</span><b>굵게</b></button>
-        <button data-command="underline" title="밑줄"><span>U̲</span><b>밑줄</b></button>
-        <button id="remove-format" title="선택 효과 지우기"><span>⌫</span><b>선택 지우기</b></button>
-        <button id="clear-effects" title="전체 효과 지우기"><span>↶</span><b>전체 지우기</b></button>
-      </aside>
-    </article>
-  </dialog>
   <script src="./app.js" defer></script>
-</body>
-</html>
+</body></html>
