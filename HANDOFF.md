@@ -4,7 +4,7 @@
 
 공개 GitHub Pages판은 기존 비공개 사이트의 **열람 화면을 그대로 복제한 공개 전용판**이다. 새 디자인을 만들거나 UI를 임의로 단순화하지 않는다.
 
-기준 UI는 `/Users/seongmingeun/Desktop/CODEX_TEST/sermon-archive/app/ui/ArchiveClient.tsx`와 `/Users/seongmingeun/Desktop/CODEX_TEST/sermon-archive/app/globals.css`이다. 변경 전 반드시 두 파일과 실제 비공개 사이트를 비교한다.
+기준 UI는 비공개 원본 프로젝트의 `app/ui/ArchiveClient.tsx`와 `app/globals.css`이다. 변경 전 반드시 두 파일과 실제 비공개 사이트를 비교한다.
 
 ## 반드시 유지할 항목
 
