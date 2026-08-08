@@ -90,6 +90,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .search-highlight { background:#fff18a; color:inherit; border-radius:3px; padding:0 .08em; box-decoration-break:clone; -webkit-box-decoration-break:clone; box-shadow:0 0 0 2px rgba(255,241,138,.38); }
 
 .tabs { display:flex; gap:7px; padding:7px; background:rgba(232,224,211,.68); border:1px solid rgba(130,108,82,.1); border-radius:100px; overflow-x:auto; scrollbar-width:none; margin-bottom:32px; backdrop-filter:blur(16px); box-shadow:0 14px 38px rgba(101,76,46,.055),inset 0 1px rgba(255,255,255,.65); }
+.detail-filters { margin:-16px 0 28px; padding:14px 16px 16px; border:1px solid rgba(111,91,68,.14); background:rgba(255,253,248,.72); border-radius:5px 18px 5px 5px; }
+.detail-filters legend { padding:0 7px; color:var(--muted); font-size:10px; font-weight:700; }
+.detail-filters > div { display:flex; flex-wrap:wrap; gap:8px; }
+.detail-filter { position:relative; cursor:pointer; }
+.detail-filter input { position:absolute; opacity:0; pointer-events:none; }
+.detail-filter span, .detail-badge { display:inline-flex; align-items:center; border:1px solid transparent; border-radius:100px; padding:7px 11px; font-size:10px; font-weight:700; color:#665a4d; background:#eee7dc; }
+.detail-filter input:checked + span { outline:2px solid var(--deep); outline-offset:2px; color:var(--deep); }
+.detail-badge { align-self:flex-start; margin:12px 0 0; padding:6px 10px; }
+.detail-tone-1 span, .detail-badge.detail-tone-1 { background:#efe3d4; border-color:#dcc5aa; }.detail-tone-2 span, .detail-badge.detail-tone-2 { background:#e3e8dc; border-color:#c9d1bd; }.detail-tone-3 span, .detail-badge.detail-tone-3 { background:#eee0dc; border-color:#dbc1b9; }.detail-tone-4 span, .detail-badge.detail-tone-4 { background:#e2e5e4; border-color:#c5cdcb; }.detail-tone-5 span, .detail-badge.detail-tone-5 { background:#ebe2d3; border-color:#d8c6a9; }.detail-tone-6 span, .detail-badge.detail-tone-6 { background:#e6e0e8; border-color:#cec3d1; }
 .tab { flex:1; min-width:max-content; border:0; background:transparent; color:#746c63; padding:13px 18px; border-radius:100px; cursor:pointer; font-size:12px; font-weight:600; transition:.2s ease; }
 .tab:hover { color:var(--ink); background:rgba(255,255,255,.36); }
 .tab.active { background:var(--paper); color:#4c4034; box-shadow:0 6px 22px rgba(80,64,45,.10); }
